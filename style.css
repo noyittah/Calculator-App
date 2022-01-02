@@ -1,5 +1,5 @@
 body{
-    font-family: 'Spartan';
+    font-family: 'Spartan', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,9 +87,8 @@ p{
     align-items:center;
     gap: 1rem;
 }
-
 .button{
-  background-color:white;
+  background-color:hsl(0, 0, 100%);
   align-items:space-between;
   flex-basis: 22%;
   color:hsl(221, 14%, 31%);
