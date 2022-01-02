@@ -43,26 +43,6 @@ function createFloatNum() {
     }
 }
 
-const computeResult = function (firstNum, operator, secondNum) {
-    switch (operatorSign) {
-        case '+':
-            return (firstValue + secondNum);
-            break;
-        case '-':
-            return (firstValue - secondNum);
-            break;
-        case 'X':
-            return (firstValue * secondNum);
-            break;
-        case '/':
-            return (firstValue / secondNum);
-            break;
-        case '=':
-            return (secondNum);
-            break;
-    }
-}
-
 function addOperator(operator) {
     const currentValue = Number(calcResult.textContent);
     if (operatorSign && ifNextValue) {
@@ -79,6 +59,25 @@ function addOperator(operator) {
     operatorSign = operator;
     ifNextValue = true;
 }
+const computeResult = function (firstNum, operator, secondNum) {
+    switch (operatorSign) {
+        case '+':
+            return (firstNum + secondNum);
+            break;
+        case '-':
+            return (firstNum - secondNum);
+            break;
+        case 'X':
+            return (firstNum * secondNum);
+            break;
+        case '/':
+            return (firstNum / secondNum);
+            break;
+        case '=':
+            return (secondNum);
+            break;
+    }
+}
 
 function resetCalc() {
     calcResult.textContent = '0';
@@ -88,14 +87,10 @@ function resetCalc() {
 }
 resetBtn.addEventListener('click', resetCalc);
 
-//  function deleteInput() {
-//      if(currentValue) {
-//         calcResult.textContent = calcResult.textContent.slice(0, -1);
-//      }else{
-//          return;
-//      }
-//  }
-//  deleteBtn.addEventListener('click', deleteInput);
+ function deleteInput() {
+   calcResult.textContent = calcResult.textContent.slice(0, -1);
+}
+deleteBtn.addEventListener('click', deleteInput);
 
 
 
