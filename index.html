@@ -1,26 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
+  <section class="calc">
+    <section class="calc__header">
+      <h1>calc</h1>
+      <p>THEME</p>
+      <div class="checkbox">
+      <div class="checkbox__toggle">
+      <div class="checkbox__toggle state">1</div>
+      <div class="checkbox__toggle state">2</div>
+      <div class="checkbox__toggle state">3</div>
+      </div>
+      <div class="checkbox__slider"></div>
+      </div>
+    </section>
 
+    <section class="calc__result">
+      <div class="result">
+        399,981
+      </div>
+    </section>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <section class="calc__container">
+      <div class="calc__buttons">
+        <button class="button">7</button>
+        <button class="button">8</button>
+        <button class="button">9</button>
+        <button class="button button__del">DEL</button>
+        <button class="button">4</button>
+        <button class="button">5</button>
+        <button class="button">6</button>
+        <button class="button">+</button>
+        <button class="button">1</button>
+        <button class="button">2</button>
+        <button class="button">3</button>
+        <button class="button">-</button>
+        <button class="button">.</button>
+        <button class="button">0</button>
+        <button class="button">/</button>
+        <button class="button">X</button>
+        <button class="button button__reset">RESET</button>
+        <button class="button button__equal">=</button>
+      </div>
+    </section>
+  </section>
 </body>
+
 </html>
